@@ -1,0 +1,14 @@
+
+<div class="nav-scroller py-1 mb-3 border-bottom">
+    <nav class="nav nav-underline justify-content-between">
+        <a class="<%= Path==='/' ? 'nav-item nav-link link-body-emphasis active':'nav-item nav-link link-body-emphasis'%>" href="/" >Ana Sayfa</a>
+        <%if(Authorized) {%>
+        <a class="<%= Path==='/kayit' ? 'nav-item nav-link link-body-emphasis active':'nav-item nav-link link-body-emphasis'%>" href="/cikis">Çıkış Yap</a>
+        <%} else {%>
+        <a class="<%= Path==='/oturum' ? 'nav-item nav-link link-body-emphasis active':'nav-item nav-link link-body-emphasis'%>" href="/giris">Giriş Yap</a>
+        <a class="<%= Path==='/kayit' ? 'nav-item nav-link link-body-emphasis active':'nav-item nav-link link-body-emphasis'%>" href="/kayit">Kayıt Ol</a>
+        <%}%>
+        <a class="<%= Path==='/duyuru_yaz' ? 'nav-item nav-link link-body-emphasis active':'nav-item nav-link link-body-emphasis'%>" href="/duyuru_yaz">Duyuru Yaz</a>
+      </nav>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<%- include ('includes/head.ejs') %>
+<%- include('includes/nav.ejs')%>
+<body>
+    
+    <h2 style="text-align: center;"><%=subTitle%></h2>
+    
+<main class="form-signin w-100 m-auto">
+    
+<form action="/duyuru" method="post">
+
+    <div class="form-floating">
+    <input type="text" class="form-control" name="subj" id="konu" placeholder="Konu" >
+    <label for="konu">Duyuru Konusu</label>
+    </div>
+     <div class="form-floating"> 
+        <textarea class="form-control" name="ann" id="metin" placeholder="Metin" style="align-self: center;  height: 300px;"></textarea>
+        <label for="metin">Duyuru Metni</label>
+     </div>
+    <button class="btn btn-primary rounded-pill w-100 px-3" type="submit" name="kaydet">Yayınla</button>
+    
+</form>
+
+</main>
+
+<%-include('includes/foot.ejs')%>

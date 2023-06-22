@@ -1,0 +1,34 @@
+<%- include ('includes/head.ejs')%>
+<%- include('includes/nav.ejs')%>
+<body>
+    
+
+    <h2 style="text-align: center;"><%=subTitle%></h2>
+
+    <main class="form-signin w-100 m-auto">
+        <form action="/kayit" method="post">
+          
+      
+          <div class="form-floating">
+            <input required type="email" class="form-control" id="floatingInput" name="email" placeholder="isim@ornek.com">
+            <label for="floatingInput">E-posta</label>
+          </div>
+
+          <div class="form-floating">
+            <input required type="text" class="form-control" id="floatingInput" name="username" placeholder="Kullanıcı Adı">
+            <label for="floatingInput">Kullanıcı Adı</label>
+          </div>
+          
+          <div class="form-floating">
+            <input required type="password" class="form-control"  id="floatingPassword" name="password" placeholder="Şifre">
+            <label for="floatingPassword">Şifre</label>
+          </div>
+          <div style="text-align: center;">"Kayıt Ol" butonuna basarak suskunluk yasasını kabul etmiş olursunuz.</div>
+          
+          
+          <button class="btn btn-primary w-100 py-2" type="submit">Kayıt Ol</button>
+          
+        </form>
+      </main>
+
+<%- include ('includes/foot.ejs')%>

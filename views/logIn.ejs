@@ -1,0 +1,31 @@
+<%- include ('includes/head.ejs') %>
+<%- include('includes/nav.ejs')%>
+<body>
+<svg style="display: block;">
+
+</svg>
+<h2 style="text-align: center;"><%=subTitle%></h2>
+    <main class="form-signin w-100 m-auto mb-3 border-bottom">
+        <form  action="/giris" method="post">
+          
+      
+          <div class="form-floating">
+            <input required type="email" class="form-control" id="floatingInput" name="email" placeholder="example@info.com"> 
+            <label for="floatingInput">E-posta</label>
+          </div>  
+          <div class="form-floating">
+            <input required type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+            <label for="floatingPassword">Şifre</label>
+          </div>
+          
+          
+          
+          <button class="btn btn-primary w-100 py-2" type="submit">Giriş Yap</button>
+          
+        </form>
+      </main>
+      <br><div class="form-signin w-100 m-auto" style="text-align: center;">Eğer buralarda yeniysen
+        <a class="btn btn-primary w-100 py-2" href="/kayit">Kaydol</a></div><br>
+      
+    
+<%- include ('includes/foot.ejs')%>

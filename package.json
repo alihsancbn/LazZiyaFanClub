@@ -1,0 +1,26 @@
+{
+  "name": "odev_site",
+  "version": "1.0.0",
+  "description": "Ödev sitesi",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "duyuru",
+    "ödev"
+  ],
+  "author": "Ali İhsan Çoban",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "connect-mongodb-session": "^3.1.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.0"
+  }
+}
