@@ -6,13 +6,13 @@ const rootDir = require('./util/path');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 
-const MONGO_URI = "mongodb+srv://alihsancbn:Ali..433@lazziyafanclub.hycbt20.mongodb.net/LZFCdb?retryWrites=true&w=majority";
+const MONGODB_URI = "mongodb+srv://alihsancbn:Ali..433@lazziyafanclub.hycbt20.mongodb.net/LZFCdb?retryWrites=true&w=majority";
 
 const mongoose = require('mongoose');
 const app = express();
 
 const Store = new MongoDBStore({
-    uri:MONGO_URI,
+    uri:MONGODB_URI,
     collection:'sessions'
 })
 
@@ -39,7 +39,7 @@ app.use(publicData.routes);
 app.use(hata.goster404);
 
 
-mongoose.connect(MONGO_URI)
+mongoose.connect(MONGODB_URI)
 .then(result => {
     app.listen(process.env.PORT ||3000);
 })
