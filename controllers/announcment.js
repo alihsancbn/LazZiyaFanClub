@@ -1,5 +1,4 @@
 const Ann = require('../models/Announcement');
-const User = require('../models/User');
 let d = new Date();
 var d1 = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
 
@@ -65,7 +64,8 @@ const newAnn = new Ann({
     subject: subj,
     text: ann,
     sDate:d1,
-    fDate:d2
+    fDate:d2,
+    author:req.session.user.username
 });
 
 newAnn.save();

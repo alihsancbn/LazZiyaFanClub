@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const User = require('./User');
 const Schema = mongoose.Schema;
 
 const AnnsSchema = new Schema({
@@ -8,8 +9,9 @@ const AnnsSchema = new Schema({
         required: true
     },
     sDate: String,
-    fDate: String
-
+    fDate: String,
+    author: String
+    
 });
 
 
