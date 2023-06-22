@@ -1,6 +1,6 @@
 const Ann = require('../models/Announcement');
-let d = new Date();
-var d1 = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
+
+
 
 
 
@@ -27,7 +27,8 @@ exports.write = (req, res, next) => {
 
 
 exports.change = (req, res, next) => {
-    
+    let d = new Date();
+    let d1 = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
     const annId = req.params.annId;
     Ann.findById(annId).then(ann => {
 
@@ -55,9 +56,10 @@ exports.change = (req, res, next) => {
 }
 
 exports.add = (req, res, next) => {
-
+    
     const subj = req.body.subj;
     const ann = req.body.ann;
+    let d = new Date();
     var d1 = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
     var d2 = (d.getDate()+1)+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
 const newAnn = new Ann({
