@@ -5,6 +5,7 @@
     <h2 style="text-align: center;"><%=subTitle%></h2>
 
 <main class="form-signin w-100 m-auto">
+    <%if(Authorized){%>
 <form action="/guncel/<%=Ann._id%>" method="post">
 
     <div class="form-floating">
@@ -18,5 +19,6 @@
     <button class="btn btn-primary rounded-pill w-100 px-3" type="submit" name="kaydet">Düzenle</button>
     
 </form>
+<%} else {%>  <div style="text-align: center;"><h1>DUYURU DÜZENLEMEK İÇİN SİTEYE ÜYE OLMANIZ GEREKMEKTEDİR.</h1></div> <%}%>
 </main>
 <%-include('includes/foot.ejs')%>
